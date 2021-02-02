@@ -11,9 +11,10 @@ import { SpotifyService } from '../../services/spotify.service';
 export class HomeComponent implements OnInit {
   ultimasCanciones: any[] = [];
   constructor(private spotify:SpotifyService, http:HttpClient) { 
+
     this.spotify.obtenerUltimosRegistros().subscribe((response:any) => {
-      console.log(response.albums.items);
-      this.ultimasCanciones = response.albums.items;
+      console.log(response);
+      this.ultimasCanciones = response;
     });
   }
 
