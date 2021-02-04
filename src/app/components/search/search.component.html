@@ -4,6 +4,7 @@
     </div>
 </div>
 <hr>
-<app-targetas [items] ="artistas"></app-targetas>
+<app-loading *ngIf="loading"></app-loading>
+<app-targetas *ngIf="!loading" [items] ="artistas"></app-targetas>
 
   
