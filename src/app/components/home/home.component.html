@@ -1,24 +1,3 @@
 <h1> Últimos lanzamientos </h1>
 <hr>
-<div class="row row-cols-1 row-cols-md-3 g-4">
-
-  <div  *ngFor="let cancion of ultimasCanciones" class="col">
-    <div class="card h-100">
-      <img [src]="cancion.images | noimage" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">{{cancion.name}}</h5>
-        <p class="card-text">
-            <span *ngFor="let artista of cancion.artists" class="badge rounded-pill bg-success">
-                {{artista.name}}
-            </span>
-        </p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">
-            Last updated 3 mins ago
-        </small>
-      </div>
-    </div>
-  </div>
-
-</div>
+<app-targetas [items] ="ultimasCanciones"></app-targetas>

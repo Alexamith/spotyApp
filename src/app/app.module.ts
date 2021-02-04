@@ -16,6 +16,7 @@ import { SearchComponent } from './components/search/search.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { SpotifyService } from './services/spotify.service';
 import { NoimagePipe } from './pipes/noimage.pipe';
+import { TargetasComponent } from './components/targetas/targetas.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NoimagePipe } from './pipes/noimage.pipe';
     ArtistaComponent,
     SearchComponent,
     NavbarComponent,
-    NoimagePipe
+    NoimagePipe,
+    TargetasComponent
   ],
   imports: [
     BrowserModule,
