@@ -1,7 +1,6 @@
 
 <div class="row">
-    <div class="col-2">
-        <!-- <img [src]="artista.images[0].url" alt=""> -->
+    <div class="col-2 columna-img">
         <img [src]="artista.images | noimage" class="img-thumbnail img-circle">
     </div>
     <div class="col">
@@ -10,16 +9,15 @@
             <a [href]="artista.external_urls.spotify" target="_blank">Ir a la página del artista</a>
         </p>
     </div>
-    <div class="col-4 text-rigth">
+    <div class="col-4 text-rigth centro">
         <button [routerLink]="['/search']"  class="btn btn-outline-danger">
             Regresar
         </button>
     </div>
 </div>
-
 <div class="row m-5">
     <div class="col">
-        <table class="table"> 
+        <table class="table table-hover"> 
             <thead>
                 <tr>
                     <th>Foto</th>
@@ -36,7 +34,7 @@
                     <td>{{track.album.name}}</td>
                     <td>{{track.name}}</td>
                     <td>
-                        <audio [src]="track.preview_url"></audio>
+                        <audio [src]="track.preview_url" controls></audio>
                     </td>
                 </tr>
             </tbody>
